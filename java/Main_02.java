@@ -1,3 +1,4 @@
+package java;
 import java.util.Scanner;
 
 public class Main_02 {
@@ -18,9 +19,9 @@ public class Main_02 {
             } else if (x < 1 && y >= 1) {
                 result++;
             } else if (x < 1 && y < 1) {
-                result += 3;
+                result += 2;
             } else if (x >= 1 && y < 1) {
-                result += 4;
+                result += 3;
             }
             System.out.println(result);
         }
