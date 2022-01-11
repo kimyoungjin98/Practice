@@ -1,5 +1,8 @@
 package screen
 
+import LINE_DIVIDER
+import extensions.getNotEmptyString
+
 class ShoppingHome {
 
     fun start(){
@@ -12,12 +15,12 @@ class ShoppingHome {
         println("계속 하시려면 이름을 입력해주세요 :)")
 
         // fun readLine():String?
-        val name = readLine()
+        val name = readLine().getNotEmptyString()
         println(
             """
             반갑습니다 $name 님
             원하시는 카테고리를 입력해주세요
-            ***============================***
+            $LINE_DIVIDER
         """.trimIndent()
         )
     }
