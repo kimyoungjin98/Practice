@@ -26,3 +26,9 @@
 - 스마트 캐스트 : type 검사 이후에는 해당 type으로 자동 변환됨
 
 ## as / as? : Unsafe cast operator / Safe cast operator
+
+# 콘솔 프로젝트 
+
+- 프로젝트 전체에서 동일한 인스턴스를 사용하는 싱글턴 패턴 활용
+- extension 함수를 통한 기능 확장 및 공통화
+- 역할에 따른 패키지, 파일, 클래스 분리
