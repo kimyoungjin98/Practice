@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>소켓 통신을 알아보자</title>
+  </head>
+  <script>
+    // http or soket
+
+    // http 방식
+    // fetch("http://주소.com").then((res) => (res) => {
+    //   console.log(res);
+    // });
+
+    // socket 방식
+    socket = new WebSocket("ws://localhost:3000");
+    const onClick = () => {
+      socket.send("ㅎㅇㅎㅇ");
+    };
+  </script>
+  <body>
+    <button onclick="{onClick}">메세지 보내기</button>
+  </body>
+</html>
