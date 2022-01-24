@@ -11,12 +11,17 @@
     // });
 
     // socket 방식
-    socket = new WebSocket("ws://localhost:3000");
-    const onClick = () => {
-      socket.send("ㅎㅇㅎㅇ");
+    const socket = new WebSocket("ws://localhost:3001");
+
+    socket.onopen = () => {
+      console.log("소켓 서버와 연결 성공");
+    };
+
+    socket.onmessage = (e) => {
+      console.log(`받은 데이터 : ${e.data}`);
     };
   </script>
   <body>
-    <button onclick="{onClick}">메세지 보내기</button>
+    <button onclick="socket.send('ㅎㅇ')">메세지 보내기</button>
   </body>
 </html>
