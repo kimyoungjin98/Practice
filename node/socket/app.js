@@ -13,7 +13,6 @@ const wss = new WebSocketServer({ port: 3001 });
 
 wss.on("connection", (ws, req) => {
   console.log("커넥션");
-
   ws.on("message", (msg) => {
     console.log("메시지 보내기 : " + msg);
     ws.send("ㅃㅇ");
