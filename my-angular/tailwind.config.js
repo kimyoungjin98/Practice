@@ -4,4 +4,8 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  fontFamily: {
+    sans: ["Nanum Gothic Coding", "monospace"],
+    serif: ["Merriweather", "serif"],
+  },
 };
