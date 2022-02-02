@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 
-// http와 비동기로 데이터를 주고받는 라이브러리
-import axios from "axios";
-
 function Upload() {
   // 파일 정보를 저장할 state 선언
   const [file, setFile] = useState(null);
@@ -13,11 +10,23 @@ function Upload() {
   };
   const onClick = () => {
     // 비동기 방식으로 데이터를 주고받기 위해 formData 함수를 사용
-    const formData = new FormData();
-    formData.append("file", file, file.name);
+    // const formData = new FormData();
+    // formData.append("file", file, file.name);
+    console.log(file);
 
     // axios의 post 함수를 사용해 요청 주소(백엔드)에 업로드 요청
-    axios.post("백엔드 주소", formData).then((res) => console.log(res));
+    // axios.post("백엔드 주소", formData).then((res) => console.log(res));
+    fetch("http/localhost:3000/", FormData)
+      .then((res) => {
+        console.log(res);
+      })
+      .then((result) => {
+        return (
+          <div>
+            <h1>${result.name}</h1>
+          </div>
+        );
+      });
   };
 
   return (
@@ -25,6 +34,7 @@ function Upload() {
       <form encType="multipart/form-data">
         <input type="file" onChange={onChange}></input>
         <button onClick={onClick}>업로드</button>
+        <onClick />
       </form>
     </div>
   );
